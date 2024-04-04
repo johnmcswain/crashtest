@@ -1,0 +1,17 @@
+{
+  "name": "crashtest",
+  "version": "1.0.0",
+  "description": "Git Stuff",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "inquirer": "^8.2.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
