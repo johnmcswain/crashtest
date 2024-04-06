@@ -1,17 +1,26 @@
 {
   "name": "crashtest",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Git Stuff",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest --detectOpenHandles",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "inquirer": "^8.2.5"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "john mcswain",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "babel-jest": "^29.7.0"
+  }
 }

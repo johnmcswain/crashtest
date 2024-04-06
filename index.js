@@ -2,28 +2,29 @@
 // "type": "module", identical to the one in the package.json
 // on line 6 in order to use import/export
 
-import { NASAMedia, ItunesMedia } from './classes.js'
+import {ItunesMedia} from './classes.js'
 import axios from 'axios' // back-end JS library
 import inquirer from 'inquirer'
 try {
-  main()
+  if (process.env.NODE_ENV !== 'test') {
+    main();
+  }
 } catch (e) {
   console.log(e)
 }
 
 function main () {
-  // promptNASASearchTerm()
-  // sun
-  // gas giant
-  // dwarf star
-
   promptItunesSearchTerm()
-
   // Avengers: Endgame', 'movie'
   // Interstellar','movie'
   // Inception','movie'
   // 'Fell in Love With a Girl White Stripes','musicVideo'
   // Smells like teen spirit Nirvana','musicVideo'
+
+  // promptNASASearchTerm()
+  // sun
+  // gas giant
+  // dwarf star
 }
 
 /**
@@ -106,7 +107,7 @@ function promptNASASearchTerm () {
       console.error('Prompt failed', error)
     })
 }
-function getItunesData (name = '', media = '') {
+export function getItunesData (name = '', media = '') {
   // APIs
   // iTunes Search
   // https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html
@@ -133,7 +134,7 @@ function getItunesData (name = '', media = '') {
       console.log(error)
     })
 }
-function promptItunesSearchTerm () {
+export function promptItunesSearchTerm () {
   // run in the console: npm install --save inquirer@^8.0.0
   // https://www.npmjs.com/package/inquirer
   inquirer
