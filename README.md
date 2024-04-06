@@ -1,3 +1,16 @@
+# crash test
+
+This is a space to learn, crash, recover, and experiment without fear of punitive annihilation or destruction. But then again...
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhvN2FxaWZ1aXl5bTVxaW4xcGU4NzA3ZTZ3dnFqY2F0am9uN3lsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3mZepmuaiQrVYjGU/giphy.gif'>
+To run the iTunes search, do the following (from the root directory):
+```shell
+npm i && npm start
+```
+To run tests (from the root directory):
+```shell
+npm test
+```
+
 ## ItunesMedia class
 #### Properties
 - `name`: The name or title of the media item.
